@@ -50,3 +50,9 @@ Thumbs.db
 # Git metadata for MATLAB projects (personleg)
 *.gitlab
 *.gitattributes
+
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
