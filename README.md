@@ -99,7 +99,7 @@ Vent tålmodig mens MATLAB starter opp, og utnytt muligheten til å bli kjent me
 
 ### Steg 6: Åpne første oppgave
 
-I MATLAB: Naviger til `del1/oppgave1.slx` og åpne filen. Nå er dere klare til å sette i gang!
+I MATLAB: Naviger til `del1/del1_1_fartsregulering.slx` og åpne filen. Nå er dere klare til å sette i gang!
 
 ## Mac-versjon
 
