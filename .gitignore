@@ -46,13 +46,18 @@
 # OS-filer
 .DS_Store
 Thumbs.db
-
-# Git metadata for MATLAB projects (personleg)
-*.gitlab
-*.gitattributes
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
 
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 .Python
+
+# Git metadata for MATLAB projects (personleg)
+*.gitlab
+*.gitattributes

@@ -48,14 +48,14 @@ ASSETS_DIR = os.path.join(BASE_DIR, "assets")
 
 # ─── MQTT Configuration ───────────────────────────
 MQTT_ENABLED      = True
-MQTT_BROKER       = "localhost"
+MQTT_BROKER       = "192.168.1.3"
 MQTT_PORT         = 1883
+MQTT_USER         = "BIAISbroker"
+MQTT_PASSWD       = "shinyteapot294"
 MQTT_TOPIC_SCORE  = None  # set dynamically
 
-try:
-    import paho.mqtt.client as mqtt
-except ImportError:
-    mqtt = None
+import paho.mqtt.client as mqtt
+
 
 # ─── Campaign Configuration ───────────────────────
 CAMPAIGN_LEVELS      = 5
@@ -354,9 +354,10 @@ def mqtt_setup():
     except Exception:
         # paho-mqtt < 2.0: no callback_api_version parameter
         client = mqtt.Client(protocol=mqtt.MQTTv311)
+    client.username_pw_set(MQTT_USER, MQTT_PASSWD)
 
     try:
-        client.connect(MQTT_BROKER, MQTT_PORT, keepalive=30)
+        client.connect(MQTT_BROKER, MQTT_PORT, keepalive=45045)
         client.loop_start()
         return client
     except Exception as e:
@@ -623,7 +624,7 @@ def main():
         sys.exit(0)
 
     global MQTT_TOPIC_SCORE
-    MQTT_TOPIC_SCORE = f"zumo_car/penis/score/del2.1/{gruppe_id}"
+    MQTT_TOPIC_SCORE = f"zumo_car/elektra/score/del2/{gruppe_id}"
 
     mqtt_client = mqtt_setup()
 
