@@ -64,7 +64,7 @@ CAMPAIGN_MAP_NAMES   = [f"map{i}.csv" for i in range(1, CAMPAIGN_LEVELS+1)]
 # ─── Jumpscare Configuration ──────────────────────
 SCARE_ENABLED          = True
 SCARE_ON_LAST_MAP_ONLY = True
-SCARE_PROB             = 0.003   # 0.3% per star on last map
+SCARE_PROB             = 0.01   # 0.3% per star on last map
 SCARE_DURATION_MS      = 600
 SCARE_IMAGE_PATH       = os.path.join(ASSETS_DIR, "jumpscare.png")
 SCARE_SOUND_PATH       = os.path.join(ASSETS_DIR, "scream.mp3")  # mp3/ogg/wav
