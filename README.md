@@ -1,61 +1,71 @@
 # Installasjon og oppsett av Python og Git
 
-## Forhåndskrav - MATLAB
+## Førehandskrav – MATLAB
 
-**⚠️ VIKTIG:** Dette prosjektet krever MATLAB installert lokalt på datamaskinen din. Du må:
+**⚠️ VIKTIG:** Dette prosjektet krev at du har MATLAB installert lokalt på datamaskina di. Du må:
 
-1. Ha betalt semesteravgift og fått NTNU-epost
-2. Laste ned MATLAB fra [NTNU sin portal](https://se.mathworks.com/academia/tah-portal/ntnu-30833468.html)
-3. **OBS:** Du må laste ned MATLAB lokalt på PC-en din - ikke bruk web-versjonen!
-4. Du trenger også "Navigation Toolbox", "Industrial Communication Toolbox" og "Instrument Control Toolbox" installert i MATLAB samt Simulink
+1. Ha betalt semesteravgifta og fått NTNU-epost
+2. Lasta ned MATLAB frå [NTNU-portalen](https://se.mathworks.com/academia/tah-portal/ntnu-30833468.html)
+3. **OBS:** Du må laste ned MATLAB lokalt på PC-en din – ikkje bruk webversjonen!
+4. Du treng òg “Navigation Toolbox”, “Industrial Communication Toolbox” og “Instrument Control Toolbox” installert i MATLAB, samt Simulink
 
-Hvis du ikke har dette på plass, gjør det før du fortsetter med resten av guiden.
+Om du ikkje har dette på plass, gjer det før du held fram med resten av rettleiinga.
+
+---
 
 ## Windows-versjon
 
 ### Steg 1: Installer Python
 
-Først må vi installere Python på datamaskinen din. Python er programmeringsspråket vi skal bruke noen av gangene.
+Først må vi installere Python på maskina di. Python er programmeringsspråket vi skal bruke av og til.
 
-Åpne **Command Prompt** (CMD) ved å trykke **Windows + R**, skriv `cmd`, og trykk **Enter**.
+> Sjølv om du allereie har Anaconda, Spyder eller liknande frå vidaregåande, må du framleis gjere dette steget.
 
-I terminalen, skriv følgende kommando for å installere Python:
+Opne **Command Prompt (CMD)** ved å trykkje **Windows + R**, skriv `cmd`, og trykk **Enter**.
+
+Skriv så denne kommandoen for å installere Python:
 
 ```
 winget install Python.Python.3.13 --accept-package-agreements
 ```
 
-Vent til installasjonen er ferdig. For å sjekke at Python ble installert riktig, skriv:
+> Dette kan òg gjerast via Microsoft Store.
+
+Vent til installasjonen er ferdig. For å sjekke at Python vart installert rett, skriv:
 
 ```
 python --version
 ```
 
-Du skal nå se noe som ligner på `Python 3.x.x`. Hvis ikke, prøv å lukke terminalen og åpne en ny.
+Du skal no sjå noko som liknar på `Python 3.x.x`. Om ikkje, prøv å lukke terminalen og opne ei ny.
+
+---
 
 ### Steg 2: Installer Git
 
-Git er et verktøy for å laste ned og administrere kodeprosjekter. Vi installerer det med denne kommandoen:
+Git er eit verktøy for å laste ned og administrere kodeprosjekt. Vi installerer det med denne kommandoen:
 
 ```
 winget install --id Git.Git -e --source winget
 ```
 
-For å sjekke at Git ble installert riktig, skriv:
+For å sjekke at Git vart installert rett, skriv:
 
 ```
 git --version
 ```
 
-Du skal nå se noe som ligner på `git version 2.x.x`.
+Du skal no sjå noko som liknar på `git version 2.x.x`.
 
-💡 **Tips:** Hvis Git ikke blir gjenkjent, prøv å lukke terminalen og åpne en ny.
+💡 **Tips:** Dersom Git ikkje blir gjenkjent, prøv å lukke terminalen og opne ei ny.
+
+---
 
 ### Steg 3: Klon prosjektet
 
-Nå skal vi laste ned prosjektfilene fra internett. Et *repository* (eller "repo") er ganske enkelt et prosjektarkiv som lagres på nettet.
+No skal vi laste ned prosjektfilene frå internett. Eit *repository* (eller “repo”) er ganske enkelt eit prosjektarkiv som ligg på nettet.
 
-Først lager vi en mappe kalt "github" der vi kan samle alle våre prosjekter:
+Først lagar vi ei mappe kalla “github” der vi kan samle alle prosjekta våre:
 
 ```
 mkdir C:\github\
@@ -65,27 +75,31 @@ mkdir C:\github\
 cd /d C:\github\
 ```
 
-Nå kan vi klone (laste ned) prosjektet:
+No kan vi klone (laste ned) prosjektet:
 
 ```
 git clone https://github.com/Adriaeik/BIAIS_Oppstartsuka_25
 ```
 
-**⚠️ Advarsel:** Får du en feilmelding om at mappen allerede finnes, kan du enten slette den eksisterende mappen eller klone til et annet navn:
+**⚠️ Merk:** Får du feilmelding om at mappa alt finst, kan du anten slette den gamle eller klone til eit nytt namn:
 
 ```
-git clone https://github.com/Adriaeik/BIAIS_Oppstartsuka_25 ny_mappe_navn
+git clone https://github.com/Adriaeik/BIAIS_Oppstartsuka_25 ny_mappe_namn
 ```
 
-### Steg 4: Gå til prosjektmappen
+---
 
-Når nedlastingen er ferdig, naviger inn i prosjektmappen:
+### Steg 4: Gå til prosjektmappa
+
+Når nedlastinga er ferdig, naviger inn i prosjektmappa:
 
 ```
 cd BIAIS_Oppstartsuka_25
 ```
 
-💡 **Tips:** Hvis du endret mappenavnet over, bruk det nye navnet her.
+💡 **Tips:** Dersom du endra mappenamnet over, bruk det nye her.
+
+---
 
 ### Steg 5: Start MATLAB
 
@@ -95,23 +109,31 @@ Skriv inn matlab i terminalen og trykk enter:
 matlab
 ```
 
-Vent tålmodig mens MATLAB starter opp, og utnytt muligheten til å bli kjent med gruppa di.
+Vent medan MATLAB startar opp, og bruk tida til å bli kjend med gruppa di.
 
-### Steg 6: Åpne første oppgave
+---
 
-I MATLAB: Naviger til `del1/del1_1_fartsregulering.slx` og åpne filen. Nå er dere klare til å sette i gang!
+### Steg 6: Opne første oppgåve
+
+I MATLAB: Naviger til `del1/del1_1_fartsregulering.slx` og opne fila. No er de klare til å starte!
+
+---
 
 ## Mac-versjon
 
-**⚠️ Advarsel:** Mac-versjonen er ikke testet og vil ikke bli testet. Mac-brukere som får problemer må søke hjelp på Stack Overflow eller andre ressurser. Studentassistenter bruker ikke tid på dette.
+**⚠️ Merk:** Mac-versjonen er ikkje testa og vil heller ikkje bli testa. Mac-brukarar som får problem må søkje hjelp på Stack Overflow eller liknande. Studentassistentar brukar ikkje tid på dette.
 
-### Forhåndskrav
+---
 
-På Mac trenger du først **Homebrew** (en pakkebehandler). Hvis du ikke har det, installer det først ved å følge instruksjonene på [brew.sh](https://brew.sh).
+### Førehandskrav
+
+På Mac treng du først **Homebrew** (ein pakkebehandlar). Dersom du ikkje har det, installer det ved å følgje instruksjonane på [brew.sh](https://brew.sh).
+
+---
 
 ### Steg 1: Installer Python
 
-Åpne **Terminal** (søk etter "Terminal" i Spotlight eller finn den i Applications/Utilities).
+Opne **Terminal** (søk etter “Terminal” i Spotlight eller finn det i Applications/Utilities).
 
 Installer Python med Homebrew:
 
@@ -125,9 +147,11 @@ Sjekk at installasjonen fungerte:
 python3 --version
 ```
 
+---
+
 ### Steg 2: Installer Git
 
-Git kommer ofte ferdig installert på Mac, men vi installerer den nyeste versjonen:
+Git kjem ofte ferdig installert på Mac, men vi installerer den nyaste versjonen:
 
 ```
 brew install git
@@ -139,11 +163,13 @@ Sjekk installasjonen:
 git --version
 ```
 
-💡 **Tips:** Hvis Git ikke blir gjenkjent, prøv å lukke terminalen og åpne en ny.
+💡 **Tips:** Dersom Git ikkje blir gjenkjent, prøv å lukke terminalen og opne ei ny.
+
+---
 
 ### Steg 3: Klon prosjektet
 
-Naviger til ønsket mappe og opprett en "github"-mappe for å samle prosjekter:
+Naviger til ønskja mappe og opprett ei “github”-mappe for å samle prosjekt:
 
 ```
 mkdir ~/github/
@@ -159,15 +185,20 @@ Klon prosjektet:
 git clone https://github.com/Adriaeik/BIAIS_Oppstartsuka_25
 ```
 
-### Steg 4-6: Felles for begge plattformer
+---
 
-Følg steg 4-6 fra Windows-delen ovenfor. De er identiske for begge plattformer.
+### Steg 4–6: Felles for begge plattformer
 
-💡 **Tips for Mac:** `matlab`-kommandoen kan variere avhengig av hvordan MATLAB er installert på din Mac.
+Følg steg 4–6 frå Windows-delen ovanfor. Dei er identiske for begge plattformer.
 
-## Liten forklaring av hva som skjer
+💡 **Tips for Mac:** `matlab`-kommandoen kan variere avhengig av korleis MATLAB er installert på din Mac.
 
-- **Python** er programmeringsspråket som ofte brukes for dataanalyse og analyse - vi bruker det for å visualisere data i dag
-- **Git** er et versjonskontrollsystem som lar oss laste ned og administrere kodeprosjekter
-- **Kloning** betyr å laste ned en kopi av et prosjekt fra internett til din lokale maskin
-- **Repository** (repo) er en samling av filer og mapper som utgjør et prosjekt
+---
+
+## Kort forklaring av kva som skjer
+
+* **Python** er eit programmeringsspråk som ofte blir brukt til dataanalyse – vi brukar det her for å visualisere data
+* **Git** er eit versjonskontrollsystem som let oss laste ned og administrere kodeprosjekt
+* **Kloning** betyr å laste ned ein kopi av eit prosjekt frå nettet til di eiga maskin
+* **Repository** (repo) er ei samling av filer og mapper som utgjer eit prosjekt
+
