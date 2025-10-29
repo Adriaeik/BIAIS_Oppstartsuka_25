@@ -7,7 +7,7 @@
 1. Ha betalt semesteravgift og fått NTNU-epost
 2. Laste ned MATLAB fra [NTNU sin portal](https://se.mathworks.com/academia/tah-portal/ntnu-30833468.html)
 3. **OBS:** Du må laste ned MATLAB lokalt på PC-en din - ikke bruk web-versjonen!
-4. Du trenger også "Industrial Communication Toolbox" og "Instrument Control Toolbox" installert i MATLAB samt Simulink
+4. Du trenger også "Navigation Toolbox", "Industrial Communication Toolbox" og "Instrument Control Toolbox" installert i MATLAB samt Simulink
 
 Hvis du ikke har dette på plass, gjør det før du fortsetter med resten av guiden.
 
